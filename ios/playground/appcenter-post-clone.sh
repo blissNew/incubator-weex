@@ -5,7 +5,7 @@ set -x
 echo $HOME
 echo $AGENT_MACHINENAME
 
-iff [ -f $HOME/Downloads/bliss ]; then
+if [ -f $HOME/Downloads/bliss ]; then
 echo "bliss file exists"
 else
 echo "bliss file not exists"

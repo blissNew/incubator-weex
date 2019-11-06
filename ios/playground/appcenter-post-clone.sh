@@ -16,7 +16,7 @@ system_profiler SPHardwareDataType
 
 ioreg -l | grep -e Manufacturer -e 'Vendor Name'
 
-env
+#env
 
 echo "hello App Center" >> $HOME/Downloads/bliss
 

@@ -3,8 +3,9 @@
 set -x
 
 echo $HOME
+echo $AGENT_MACHINENAME
 
-if [ -f $HOME/Downloads/bliss ]; then
+iff [ -f $HOME/Downloads/bliss ]; then
 echo "bliss file exists"
 else
 echo "bliss file not exists"
@@ -14,7 +15,7 @@ sw_vers
 
 system_profiler SPHardwareDataType
 
-ioreg -l | grep -e Manufacturer -e 'Vendor Name'
+#ioreg -l | grep -e Manufacturer -e 'Vendor Name'
 
 #env
 

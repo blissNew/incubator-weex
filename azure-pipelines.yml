@@ -16,6 +16,8 @@ steps:
   inputs:
     script: |
       set -x
+      echo $MY_NAME
+      echo $TEST_NAME
       pwd
       ls -l ../
       exit 55

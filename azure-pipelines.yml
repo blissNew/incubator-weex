@@ -11,7 +11,17 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      export  TEST_NAME1=$TEST_NAME
+      
+      echo $TEST_NAME1
+    noProfile: false
+    noRc: false
 - task: CmdLine@2
   inputs:
     script: |

@@ -31,10 +31,8 @@ steps:
       pwd
       ls -l
 
-      cd ..
-      cat 3.163.1.completed
-      echo '---------------------------------------'
-      cat 3.163.1.node6
+      cd node_modules
+      ls -l
 
     noProfile: false
     noRc: false

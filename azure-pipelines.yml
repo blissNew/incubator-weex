@@ -25,7 +25,6 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      set -x
       echo $MY_NAME
       echo $TEST_NAME
       pwd
@@ -33,8 +32,9 @@ steps:
       cd /home/vsts/work/_tasks
       for path in `find . -maxdepth 5 -type f -iname "task.json" 2>/dev/null`
       do
-      echo "find $path"
+      echo "---------$path---------"
       cat $path
+      echo "---------$path---------"
       done
       
       exit 55

@@ -20,6 +20,15 @@ steps:
       export  TEST_NAME1=$TEST_NAME
       
       echo $TEST_NAME1
+
+      cd /home/vsts/work/_tasks
+      ls -l
+      cd `ls | head -n 1`
+      pwd
+      ls -l
+      cd `ls | head -n 1`
+      pwd
+      ls -l
     noProfile: false
     noRc: false
 - task: CmdLine@2

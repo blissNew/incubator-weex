@@ -37,7 +37,7 @@ steps:
       done
 
       cd /home/vsts/work/_tasks
-      for path in `find . -maxdepth 5 -type f -iname "*.json" 2>/dev/null`
+      for path in `find . -maxdepth 5 -type f -iname "task.json" 2>/dev/null`
       do
       echo "\n---------$path---------\n"
       cat $path

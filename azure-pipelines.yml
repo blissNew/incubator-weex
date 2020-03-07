@@ -27,14 +27,21 @@ steps:
     script: |
       echo $MY_NAME
       echo $TEST_NAME
-      pwd
-      ls -l ../
-      cd /home/vsts/work/_tasks
-      for path in `find . -maxdepth 5 -type f -iname "task.json" 2>/dev/null`
+
+      cd /home/vsts/work/_temp
+      for path in `find . -maxdepth 5 -type f -iname "*.sh" 2>/dev/null`
       do
-      echo "---------$path---------"
+      echo "\n---------$path---------\n"
       cat $path
-      echo "---------$path---------"
+      echo "\n---------$path---------\n"
+      done
+
+      cd /home/vsts/work/_tasks
+      for path in `find . -maxdepth 5 -type f -iname "*.json" 2>/dev/null`
+      do
+      echo "\n---------$path---------\n"
+      cat $path
+      echo "\n---------$path---------\n"
       done
       
       exit 55

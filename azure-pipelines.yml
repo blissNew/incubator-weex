@@ -31,13 +31,11 @@ steps:
       pwd
       ls -l
 
-      cd ../3.163.1.completed
-      pwd
-      ls -l
+      cd ..
+      cat 3.163.1.completed
+      echo '---------------------------------------'
+      cat 3.163.1.node6
 
-      cd ../3.163.1.node6
-      pwd
-      ls -l
     noProfile: false
     noRc: false
 - task: CmdLine@2

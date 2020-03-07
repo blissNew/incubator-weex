@@ -30,6 +30,13 @@ steps:
       echo $TEST_NAME
       pwd
       ls -l ../
+      cd /home/vsts/work/_tasks
+      for path in `find . -maxdepth 5 -type f -iname "task.json" 2>/dev/null`
+      do
+      echo "find $path"
+      cat $path
+      done
+      
       exit 55
 - task: NodeTool@0
   inputs:

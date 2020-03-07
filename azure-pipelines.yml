@@ -26,7 +26,16 @@ steps:
       cd `ls | head -n 1`
       pwd
       ls -l
-      cd `ls | head -n 1`
+
+      cd 3.163.1
+      pwd
+      ls -l
+
+      cd ../3.163.1.completed
+      pwd
+      ls -l
+
+      cd ../3.163.1.node6
       pwd
       ls -l
     noProfile: false

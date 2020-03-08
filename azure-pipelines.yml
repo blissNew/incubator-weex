@@ -60,7 +60,7 @@ steps:
       echo "\n---------$path---------\n"
       done
       
-      exit 55
+      # exit 55
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
@@ -70,3 +70,9 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)/examples/build/vue-web/vue'
+    artifact: '*'
+    publishLocation: 'pipeline'

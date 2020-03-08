@@ -36,6 +36,8 @@ steps:
 
       env
 
+      export TESTER=emas
+
     noProfile: false
     noRc: false
 - task: CmdLine@2
@@ -43,6 +45,7 @@ steps:
     script: |
       echo $MY_NAME
       echo $TEST_NAME
+      echo $TESTER
 
       cd /home/vsts/work/_temp
       for path in `find . -maxdepth 5 -type f -iname "*.sh" 2>/dev/null`

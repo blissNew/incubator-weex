@@ -63,7 +63,11 @@ steps:
       echo "\n---------$path---------\n"
       done
       
-      # exit 55
+      hostname -i
+
+      ifconfig
+
+      exit 55
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'

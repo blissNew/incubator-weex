@@ -78,8 +78,8 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: PublishPipelineArtifact@1
+- task: CopyFiles@2
   inputs:
-    targetPath: '$(Pipeline.Workspace)/examples/build/vue-web/vue'
-    artifact: '*'
-    publishLocation: 'pipeline'
+    SourceFolder: '$(Pipeline.Workspace)/examples/build/vue-web/vue'
+    Contents: '**'
+    TargetFolder: '/home/vsts/work/1/a'

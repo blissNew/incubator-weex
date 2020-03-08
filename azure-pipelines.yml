@@ -67,7 +67,7 @@ steps:
 
       ifconfig
 
-      exit 55
+      # exit 55
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'

@@ -8,7 +8,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  default: 'peiwenlpws-Mac-Pro'
 
 steps:
 - task: Bash@3

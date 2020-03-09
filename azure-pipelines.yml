@@ -8,7 +8,7 @@ trigger:
 - master
 
 pool:
-  Default: 'peiwenlpws-Mac-Pro'
+  name: Default
 
 steps:
 - task: Bash@3

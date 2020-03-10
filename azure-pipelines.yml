@@ -12,6 +12,7 @@ pool:
 
 steps:
 - task: Bash@3
+  name: bash1
   inputs:
     targetType: 'inline'
     script: |
@@ -37,6 +38,8 @@ steps:
       env
 
       export TESTER=emas
+
+      echo "##vso[task.setvariable variable=sauce]crushed tomatoes"
 
       exit 9
 
@@ -70,6 +73,9 @@ steps:
       hostname -i
 
       ifconfig
+
+      echo "----sauce----"
+      echo $(bash1.sauce) 
 
       exit 55
 - task: NodeTool@0

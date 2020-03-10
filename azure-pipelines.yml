@@ -75,7 +75,7 @@ steps:
       ifconfig
 
       echo "----sauce----"
-      echo $(bash1.sauce) 
+      echo $(sauce) 
 
       exit 55
 - task: NodeTool@0

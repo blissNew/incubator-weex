@@ -39,7 +39,7 @@ steps:
 
       export TESTER=emas
 
-      echo "##vso[task.setvariable variable=sauce]crushed tomatoes"
+      echo "##vso[task.setvariable variable=sauce;isOutput=true]crushed tomatoes"
 
       exit 9
 
@@ -54,28 +54,12 @@ steps:
       echo $TEST_NAME
       echo $TESTER
 
-      cd /home/vsts/work/_temp
-      for path in `find . -maxdepth 5 -type f -iname "*.sh" 2>/dev/null`
-      do
-      echo "\n---------$path---------\n"
-      cat $path
-      echo "\n---------$path---------\n"
-      done
-
-      cd /home/vsts/work/_tasks
-      for path in `find . -maxdepth 5 -type f -iname "task.json" 2>/dev/null`
-      do
-      echo "\n---------$path---------\n"
-      cat $path
-      echo "\n---------$path---------\n"
-      done
-      
       hostname -i
 
       ifconfig
 
       echo "----sauce----"
-      echo $(sauce) 
+      echo $(bash1.sauce) 
 
       exit 55
 - task: NodeTool@0

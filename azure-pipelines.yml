@@ -38,9 +38,13 @@ steps:
 
       export TESTER=emas
 
+      exit 9
+
     noProfile: false
     noRc: false
 - task: CmdLine@2
+  condition: succeededOrFailed()
+  continueOnError: true
   inputs:
     script: |
       echo $MY_NAME
@@ -67,7 +71,7 @@ steps:
 
       ifconfig
 
-      # exit 55
+      exit 55
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'

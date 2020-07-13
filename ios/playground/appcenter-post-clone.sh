@@ -13,9 +13,7 @@ fi
 
 sw_vers
 
-system_profiler SPHardwareDataType
-
-system_profiler SPEthernetDataType
+system_profiler SPHardwareDataType SPEthernetDataType SPStorageDataType
 
 #ioreg -l | grep -e Manufacturer -e 'Vendor Name'
 

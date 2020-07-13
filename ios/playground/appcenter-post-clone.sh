@@ -15,6 +15,8 @@ sw_vers
 
 system_profiler SPHardwareDataType
 
+system_profiler SPEthernetDataType
+
 #ioreg -l | grep -e Manufacturer -e 'Vendor Name'
 
 #env
